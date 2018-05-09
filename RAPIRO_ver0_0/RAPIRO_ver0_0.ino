@@ -453,7 +453,7 @@ int readOneDigit() {
   int buf;
   while(!Serial.available()) {}
   buf = Serial.read() - 48;
-  if(buf < 0 || 9 < buf){
+  if(buf < 0 || (MAXMN-1) < buf){
     buf = ERR;
   }
   return buf;
